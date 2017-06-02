@@ -5,6 +5,7 @@ let results;
 encode(str);
 decode(results)
 
+//TODO testing with receiving results
 function decode(str){
   console.log('results decode ', results);
 }
@@ -14,9 +15,7 @@ function encode(str){
     // console.log(element.charCodeAt(0).toString(16));
         return element.charCodeAt(0).toString(16);
   });
-  // console.log(strArray.join(""));
   results = strArray.join("");
-  console.log(results);
   return results;
 }
 

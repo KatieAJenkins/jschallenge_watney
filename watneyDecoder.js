@@ -23,4 +23,27 @@ function encodeArc(str) {
 
 }
 
+function decode(str){
+  return str
+    .split(',')
+    .map(e => String.fromCharCode(parseInt(e,16)))
+    .join('');
+}
+
+function encode(str){
+  return str
+    .split('')
+    .map(e => e.charCodeAt(0).toString(16))
+    .join(',')
+}
+
+function encodeArc(str){
+  return encode(str)
+    .split(',')
+    .join('')
+    .split('')
+    .map(e => parseInt(e,16) * 22.5)
+    .join('');
+};
+
 module.exports = {decode,encode,encodeArc}
